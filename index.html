@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList-App</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+</head>
+
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ps-5" href="#">
+                <img src="../CSS/images-folder/logo.png" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                ToDoList-App
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="search pe-5 d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <div class="text-end mb-3">
+            <button type="button" class="btn btn-secondary add-btn" data-bs-toggle="modal"
+                data-bs-target="#exampleModal" onclick="resetForm()">
+                Add New Item
+            </button>
+        </div>
+
+        <!--  add/edit modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add/Edit Task</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form">
+                            <input type="hidden" id="edit-id">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="title" placeholder="Enter task title"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="disc" class="form-label">Description</label>
+                                <textarea class="form-control" id="disc" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Item</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- modal for viewing information -->
+        <div class="modal fade" id="viewDetailsModal" tabindex="-1" aria-labelledby="viewDetailsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="viewDetailsModalLabel">Task Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="viewDetailsContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="item-container" class="row mt-3"></div>
+    </div>
+
+
+    <!--    footer section  -->
+    <footer class="footer mt-auto bg-light">
+        <div class="container">
+            <span class="text-muted">
+                <div class="footer-1"> <a class="anchor" href="index.html">
+                        <li>ToDoList-App</li>
+                    </a></div>
+                <div class="footer-2">
+                    <ul>
+                        <a class="anchor" href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a class="anchor" href="about.html">
+                            <li>About</li>
+                        </a>
+                        <a class="anchor" href="contact.html">
+                            <li>Contact</li>
+                        </a>
+
+                    </ul>
+                </div>
+                <div class="footer-3">
+                    <ul>
+                        <a class="anchor" href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a class="anchor" href="about.html">
+                            <li>About</li>
+                        </a>
+                        <a class="anchor" href="contact.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer-4">
+                    <ul>
+                        <a class="anchor" href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a class="anchor" href="about.html">
+                            <li>About</li>
+                        </a>
+                        <a class="anchor" href="contact.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+            </span>
+        </div>
+        <div class="footer-rights">
+            <a class="anchor" href="index.html">
+                www.ToDoList App
+            </a>
+            | All rights reserved
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- at the bottom of body -->
+    <script src="../JavaScript/javaScript.js"></script>
+
+</body>
+
+</html>

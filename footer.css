@@ -1,0 +1,39 @@
+.text-muted {
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+}
+
+.footer-1 {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+
+.text-muted ul {
+    list-style: none;
+    color: black;
+}
+.anchor{
+    color: black;
+    text-decoration: none;
+}
+
+.text-muted>div {
+    width: 223px;
+}
+
+.footer-rights {
+    text-align: center;
+    color: black;
+    padding: 12px 0;
+}
+
+@media (max-width:480px) {
+    .text-muted {
+        display: flex;
+        padding: 23px 122px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
