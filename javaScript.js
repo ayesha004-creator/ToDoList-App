@@ -36,10 +36,10 @@ function createCard(id, title, detail, isDone) {
             <div class="card-header d-flex  justify-content-between">
              <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="editCard('${id}')">Edit</button>
              <button type="button" class="btn btn-sm " onclick="viewDetails('${id}')">
-              <img src="../CSS/images-folder/eye-icon.svg" alt="Eye" style="width:20px; height:20px;">
+              <img src="./eye-icon.svg" alt="Eye" style="width:20px; height:20px;">
              </button>
             </div>
-          <img src="../CSS/images-folder/nature.jpeg" class="card-img-top rounded-circle" alt="Image">
+          <img src="./nature.jpeg" class="card-img-top rounded-circle" alt="Image">
           <div class="card-body">
             <h5 class="card-title">${title}</h5>
             <p class="card-text">${detail}</p>
@@ -161,3 +161,4 @@ function loadItemsLS() {
 }
 
 window.onload = loadItemsLS;
+
